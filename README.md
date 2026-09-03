@@ -1,3 +1,4 @@
 # Uni_Practice
 
-lorem
+Krupenko Daniil
+Н255Б06
