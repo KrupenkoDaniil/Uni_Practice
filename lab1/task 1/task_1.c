@@ -1,6 +1,3 @@
-/* Lab 1, part I, variant 6, task 1.
-   Sum of positive integers from the range [A, B] that are multiples of four. */
-
 #include <stdio.h>
 
 int main(void) {

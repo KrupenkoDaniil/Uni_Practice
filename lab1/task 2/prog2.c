@@ -1,6 +1,3 @@
-/* Lab 1, part II, variant 6, program 2.
-   Swap the largest negative and the first positive elements of array B(18). */
-
 #include <stdio.h>
 
 #include "array_io.h"
@@ -8,17 +5,16 @@
 
 #define N 18
 
-int main(void)
-{
-    int b[N];
+int main(void) {
+  int b[N];
 
-    array_read(b, N);
-    array_print("Source array B", b, N);
+  array_read(b, N);
+  array_print("Source array B", b, N);
 
-    if (array_swap_max_negative_first_positive(b, N))
-        array_print("After the swap", b, N);
-    else
-        printf("Swap is impossible: the array has no negative or no positive element\n");
+  if (array_swap_max_negative_first_positive(b, N))
+    array_print("After the swap", b, N);
+  else
+    printf("Swap is impossible: the array has no negative or no positive element\n");
 
-    return 0;
+  return 0;
 }
