@@ -18,12 +18,5 @@ int main(void) {
   } else {
     printf("All words after a full stop start with a capital letter\n");
   }
-  // if (sentence_starts_ok(s)) {
-  //   printf("All words after a full stop start with a capital letter\n");
-  // } else {
-  //   printf("Number of corrected words: %d\n", fix_sentence_starts(s));
-  //   string_print("Corrected string", s);
-  // }
-
   return 0;
 }
