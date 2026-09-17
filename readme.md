@@ -1,32 +1,9 @@
-# Task 1
+Building libraries
 
 ```bash
-b factorial:16
-info locals
-```
-
-# Task 2, 3
-
-```bash
-break string_read
-break string_print
-run
-# inside string_read
-where
-info locals
-finish
-# back in the caller after string_read returned
-where
-continue
-# inside string_print, at the entry
-where
-info locals
-finish
-# back in the caller after string_print returned
-where
-continue
-```
-
-```
+gcc -fPIC -shared array_lib.c -o libarray.so
+gcc -fPIC -shared matrix_lib.c -o libmatrix.so
+gcc -c dloader.c -o dloader.o
+gcc main.c -Wl,-rpath,'$ORIGIN' -o task dloader.o
 
 ```
