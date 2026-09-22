@@ -4,13 +4,9 @@
 
 #include "dloader.h"
 
-#ifdef _WIN32
-#define MATRIX_LIB "libmatrix.dll" /* LoadLibrary searches the directory */
-#define ARRAY_LIB "libarray.dll"   /* of the application itself          */
-#else
 #define MATRIX_LIB "libmatrix.so"
 #define ARRAY_LIB "libarray.so"
-#endif
+
 
 int main(void) {
   int choice;
