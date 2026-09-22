@@ -19,8 +19,7 @@ int main(void) {
 
   if (f == n) {
     printf("%d = %d!", n, k);
-    if (n == 1)
-      printf("  (and 0! = 1 too)");
+    if (n == 1) printf("  (and 0! = 1 too)");
     putchar('\n');
   } else {
     printf("%d is not a factorial of any natural number\n", n);
