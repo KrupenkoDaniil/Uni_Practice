@@ -34,7 +34,7 @@ $(part_3)/str_case.o: $(part_3)/str_case.c
 	gcc -c $< -o $@
 
 clean:
-	-del "$(part_1)\factorial.exe" "$(part_2)\brackets.exe"
-	-del "$(part_3)\capitalize.exe" "$(part_3)\capitalize.o" "$(part_3)\str_case.o" "$(part_3)\libstr.a"
-# 	rm -f "$(part_1)/factorial.exe" "$(part_2)/brackets.exe"
-# 	rm -f "$(part_3)/capitalize.exe" "$(part_3)/capitalize.o" "$(part_3)/str_case.o" "$(part_3)/libstr.a"
+	# -del "$(part_1)\factorial.exe" "$(part_2)\brackets.exe"
+	# -del "$(part_3)\capitalize.exe" "$(part_3)\capitalize.o" "$(part_3)\str_case.o" "$(part_3)\libstr.a"
+	rm -f "$(part_1)/factorial" "$(part_2)/brackets"
+	rm -f "$(part_3)/capitalize" "$(part_3)/capitalize.o" "$(part_3)/str_case.o" "$(part_3)/libstr.a"
