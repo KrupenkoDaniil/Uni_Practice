@@ -5,8 +5,8 @@
 #include "dloader.h"
 
 #ifdef _WIN32
-#define MATRIX_LIB "matrixlib.dll" /* LoadLibrary searches the directory */
-#define ARRAY_LIB "arraylib.dll"   /* of the application itself          */
+#define MATRIX_LIB "libmatrix.dll" /* LoadLibrary searches the directory */
+#define ARRAY_LIB "libarray.dll"   /* of the application itself          */
 #else
 #define MATRIX_LIB "libmatrix.so"
 #define ARRAY_LIB "libarray.so"
@@ -24,8 +24,7 @@ int main(void) {
     printf("  3 - quit\n");
     printf("> ");
 
-    if (scanf("%d", &choice) != 1)
-      break;
+    if (scanf("%d", &choice) != 1) break;
 
     if (choice == 1)
       dloader_run(MATRIX_LIB, "matrix_run");
