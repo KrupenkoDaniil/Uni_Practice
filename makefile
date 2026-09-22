@@ -1,5 +1,5 @@
 EXE = .exe
-LIB = .dll # .so
+LIB = .dll 
 
 .PHONY: all clean
 
@@ -19,4 +19,3 @@ all: ./lab3/task$(EXE)
 
 clean:
 	-del ".\lab3\task$(EXE)" ".\lab3\dloader.o" ".\lab3\libarray.dll" ".\lab3\libmatrix.dll"
-	rm -f "./lib3/task$(EXE)" "./lab3/dloader.o" "./lab3/libarray.so" "./lab3/libmatrix.so"
