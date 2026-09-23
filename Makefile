@@ -73,12 +73,12 @@ $(task_1)_O3.s: $(task_1).c
 	gcc -S -O3 $< -o $@
 
 clean:
-	-del "$(part_1)\task_1$(EXE)" "$(part_1)\task_1.o" "$(part_1)\task_1.i" "$(part_1)\task_1.s" "$(part_1)\task_1_O0.s" "$(part_1)\task_1_O3.s"
+	-del "$(part_1)\task_1$(EXE)" "$(part_1)\task_1.o" "$(part_1)\task_1.i" "$(part_1)\task_1.s" "$(part_1)\task_1_O0.s" "$(part_1)\task_1_O1.s" "$(part_1)\task_1_O2.s" "$(part_1)\task_1_O3.s"
 	-del "$(part_2)\task_2$(EXE)" "$(part_2)\task_2.o"
 	-del "$(part_2)\task_3$(EXE)" "$(part_2)\task_3.o"
 	-del "$(part_2)\array_io.o" "$(part_2)\array_process.o" "$(part_2)\libarray.a$(DEL)" "$(part_2)\array_io.o" "$(part_2)\array_process.o" "$(part_2)\libarray.a"
 	
-# 	rm -f "$(part_1)/task_1$(EXE)" "$(part_1)/task_1.o" "$(part_1)/task_1.i" "$(part_1)/task_1.s" "$(part_1)/task_1_O0.s" "$(part_1)/task_1_O3.s"
+# 	rm -f "$(part_1)/task_1$(EXE)" "$(part_1)/task_1.o" "$(part_1)/task_1.i" "$(part_1)/task_1.s" "$(part_1)/task_1_O0.s" "$(part_1)\task_1_O1.s" "$(part_1)\task_1_O2.s" "$(part_1)/task_1_O3.s"
 # 	rm -f "$(part_2)/task_2$(EXE)" "$(part_2)/task_2.o"
 # 	rm -f "$(part_2)/task_3$(EXE)" "$(part_2)/task_3.o"
 # 	rm -f "$(part_2)/array_io.o" "$(part_2)/array_process.o" "$(part_2)/libarray.a"$(DEL) "$(part_2)/array_io.o" "$(part_2)/array_process.o" "$(part_2)/libarray.a"
