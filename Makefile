@@ -1,5 +1,5 @@
 # Variables
-EXE =# .exe
+EXE = .exe
 part_1 = ./lab1/part_1
 part_2 = ./lab1/part_2
 task_1 = $(part_1)/task_1
@@ -58,11 +58,16 @@ $(PR).o: $(PR).c $(PR).h
 	gcc -c $< -o $@
 
 # Optimized
-optimized: $(task_1)_O0.s $(task_1)_O3.s
+optimized: $(task_1)_O0.s $(task_1)_O1.s $(task_1)_O2.s $(task_1)_O3.s
 
 $(task_1)_O0.s: $(task_1).c
 	gcc -S -O0 $< -o $@
 
+$(task_1)_O1.s: $(task_1).c
+	gcc -S -O1 $< -o $@
+
+$(task_1)_O2.s: $(task_1).c
+	gcc -S -O2 $< -o $@
 
 $(task_1)_O3.s: $(task_1).c
 	gcc -S -O3 $< -o $@
@@ -71,8 +76,9 @@ clean:
 	-del "$(part_1)\task_1$(EXE)" "$(part_1)\task_1.o" "$(part_1)\task_1.i" "$(part_1)\task_1.s" "$(part_1)\task_1_O0.s" "$(part_1)\task_1_O3.s"
 	-del "$(part_2)\task_2$(EXE)" "$(part_2)\task_2.o"
 	-del "$(part_2)\task_3$(EXE)" "$(part_2)\task_3.o"
+	-del "$(part_2)\array_io.o" "$(part_2)\array_process.o" "$(part_2)\libarray.a$(DEL)" "$(part_2)\array_io.o" "$(part_2)\array_process.o" "$(part_2)\libarray.a"
 	
-	rm -f "$(part_1)/task_1$(EXE)" "$(part_1)/task_1.o" "$(part_1)/task_1.i" "$(part_1)/task_1.s" "$(part_1)/task_1_O0.s" "$(part_1)/task_1_O3.s"
-	rm -f "$(part_2)/task_2$(EXE)" "$(part_2)/task_2.o"
-	rm -f "$(part_2)/task_3$(EXE)" "$(part_2)/task_3.o"
-	rm -f "$(part_2)/array_io.o" "$(part_2)/array_process.o" "$(part_2)/libarray.a"$(DEL) "$(part_2)/array_io.o" "$(part_2)/array_process.o" "$(part_2)/libarray.a"
+# 	rm -f "$(part_1)/task_1$(EXE)" "$(part_1)/task_1.o" "$(part_1)/task_1.i" "$(part_1)/task_1.s" "$(part_1)/task_1_O0.s" "$(part_1)/task_1_O3.s"
+# 	rm -f "$(part_2)/task_2$(EXE)" "$(part_2)/task_2.o"
+# 	rm -f "$(part_2)/task_3$(EXE)" "$(part_2)/task_3.o"
+# 	rm -f "$(part_2)/array_io.o" "$(part_2)/array_process.o" "$(part_2)/libarray.a"$(DEL) "$(part_2)/array_io.o" "$(part_2)/array_process.o" "$(part_2)/libarray.a"
