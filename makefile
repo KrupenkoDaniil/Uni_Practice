@@ -1,4 +1,4 @@
-EXE = .exe
+EXE = #.exe
 LIB = .dll # .so
 
 .PHONY: all clean
