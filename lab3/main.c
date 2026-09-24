@@ -8,8 +8,8 @@
 #define MATRIX_LIB "libmatrix.dll" /* LoadLibrary searches the directory */
 #define ARRAY_LIB "libarray.dll"   /* of the application itself          */
 #else
-#define MATRIX_LIB "libmatrix.so"
-#define ARRAY_LIB "libarray.so"
+#define MATRIX_LIB "matrix_lib.so"
+#define ARRAY_LIB "array_lib.so"
 #endif
 
 int main(void) {
