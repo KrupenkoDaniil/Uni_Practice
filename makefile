@@ -1,4 +1,4 @@
-EXE      =
+EXE =
 
 # ---- directories -----------------------------------------------------------
 L1A = lab1/part_1
@@ -104,10 +104,7 @@ $(L1B)/task_2$(EXE): $(L1B_P2) $(L1B)/libarrays.a
 $(L1B)/task_3$(EXE): $(L1B_P3) $(L1B)/libarrays.a
 	gcc  $(OPT) -o $@ $< -L$(L1B) -larrays
 
-# ============================================================================
-#  Lab 2.  All the programs are built with the debug information (-g),
-#  because they are studied under gdb.
-# ============================================================================
+# Lab 2. 
 
 lab2_part1: $(L2A)/factorial$(EXE)
 
